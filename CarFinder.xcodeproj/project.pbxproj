@@ -15,6 +15,8 @@
 		6BEAE5CB207AE99C000DCE9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEAE5C9207AE99C000DCE9F /* LaunchScreen.storyboard */; };
 		6BEAE5D6207AE99C000DCE9F /* CarFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEAE5D5207AE99C000DCE9F /* CarFinderTests.swift */; };
 		6BEAE5E1207AE99C000DCE9F /* CarFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEAE5E0207AE99C000DCE9F /* CarFinderUITests.swift */; };
+		6BEAE5F1207AF318000DCE9F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BEAE5F0207AEA39000DCE9F /* MapKit.framework */; };
+		6BEAE5F3207AFD82000DCE9F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEAE5F2207AFD82000DCE9F /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		6BEAE5DC207AE99C000DCE9F /* CarFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEAE5E0207AE99C000DCE9F /* CarFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFinderUITests.swift; sourceTree = "<group>"; };
 		6BEAE5E2207AE99C000DCE9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BEAE5EF207AEA2B000DCE9F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6BEAE5F0207AEA39000DCE9F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6BEAE5F2207AFD82000DCE9F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BEAE5F1207AF318000DCE9F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,7 @@
 				6BEAE5D4207AE99C000DCE9F /* CarFinderTests */,
 				6BEAE5DF207AE99C000DCE9F /* CarFinderUITests */,
 				6BEAE5BC207AE99C000DCE9F /* Products */,
+				6BEAE5EE207AEA2B000DCE9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +113,7 @@
 				6BEAE5C7207AE99C000DCE9F /* Assets.xcassets */,
 				6BEAE5C9207AE99C000DCE9F /* LaunchScreen.storyboard */,
 				6BEAE5CC207AE99C000DCE9F /* Info.plist */,
+				6BEAE5F2207AFD82000DCE9F /* DataManager.swift */,
 			);
 			path = CarFinder;
 			sourceTree = "<group>";
@@ -126,6 +134,15 @@
 				6BEAE5E2207AE99C000DCE9F /* Info.plist */,
 			);
 			path = CarFinderUITests;
+			sourceTree = "<group>";
+		};
+		6BEAE5EE207AEA2B000DCE9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BEAE5F0207AEA39000DCE9F /* MapKit.framework */,
+				6BEAE5EF207AEA2B000DCE9F /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +214,11 @@
 					6BEAE5BA207AE99C000DCE9F = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					6BEAE5D0207AE99C000DCE9F = {
 						CreatedOnToolsVersion = 9.1;
@@ -263,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BEAE5C3207AE99C000DCE9F /* SecondViewController.swift in Sources */,
+				6BEAE5F3207AFD82000DCE9F /* DataManager.swift in Sources */,
 				6BEAE5BF207AE99C000DCE9F /* AppDelegate.swift in Sources */,
 				6BEAE5C1207AE99C000DCE9F /* FirstViewController.swift in Sources */,
 			);
